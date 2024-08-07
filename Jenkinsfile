@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/seu-usuario/dotnet-hello-world.git', branch: 'main'
+                git url: 'https://github.com/NotoriosT/dotnet-hello-world.git', branch: 'main', credentialsId: 'github-token'
             }
         }
         stage('Build') {
